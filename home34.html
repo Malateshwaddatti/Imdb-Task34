@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="index.js">
+
+<!--Create IMDB1 movie database useing Mysql database-->
+create imdb1 database;
+use imdb1;
+
+<!--creating IMDB Movie1 Tabl-->
+create table Movie(id int NOTNULL unique,
+movie_title varchar(20) NOTNULL ,
+Actor_name varchar(15) NOTNULL,
+Skills  varchar(20) NOTNULL,
+Actress_name varchar(20) NOTNULL,
+Director_name varchar(22)NOTNULL,
+Descriptions varchar(22)NOTNULL,
+Running_time Text NOTNULL,
+Release_date Date NOTNULL,
+Genre_id int NOTNULL unique);
+
+<!--Inserting data into Movie table-->
+insert into Movie(id,movie_title,Actor,SKills,Actress,Director,Descriptions,Running_time,Release_date,Genre_id)
+values
+    (1,"Spider man","Tom Holled","Singing Danceing,Acting Marital Arts,","Zendya","Sam Rimia","2 Hours 1minute","24 may 2002","1"),
+    (2,"Kingdom of heavn","Leiom seemson","Acting ,dircting,singing","Eva Green","Redliey Scoot","2 Hours 24Minutes","May 8 2005","2"),
+    (3,"The Lion King","Donalad Glavor","dancing singing marital arts sports","Byonce Nala","Jhon Fevreav","1 Hours 16minutes","July19 2019","5"),
+    (4,"Modern Times","Chalie Chaplin","Acting Dancing Singing","Paluett Goddard","Chalie Chaplin","1 Hours 27Minutes","Feburary25 1936","6");
+
+    <!--Finding Movie name actor director And skills-->
+     select from Movie
+     where name="spider man";
+
+    select from Movie
+    where id>=1 and id<=4;
+
+
+</body>
+</html>
